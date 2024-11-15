@@ -32,8 +32,13 @@ def syracuse_l(n):
         list: la suite de Syracuse de source n
     """
 
-    # votre code ici 
     l = [ ]
+    while n > 1:
+        if n%2 == 0:
+            n //= 2
+        else:
+            n = 3*n + 1
+        l.append(n)
     return l
 
 def temps_de_vol(l):
@@ -45,11 +50,9 @@ def temps_de_vol(l):
     Returns:
         int: le temps de vol
     """
-    
-    # votre code ici
+    #votre code ici
 
-    n = 0
-    return n
+    return len(l)
 
 def temps_de_vol_en_altitude(l):
     """Retourne le temps de vol en altitude d'une suite de Syracuse
@@ -60,10 +63,11 @@ def temps_de_vol_en_altitude(l):
     Returns:
         int: le temps de vol en altitude
     """
-
-    # votre code ici
-
     n = 0
+    # votre code ici
+    for i in range(1,len(l)):
+        if l[i] <= l[0]:
+            return i
     return n
 
 
@@ -80,6 +84,9 @@ def altitude_maximale(l):
     # votre code ici
     
     n = 0
+    for i in l:
+        if i > n:
+            n = i
     return n
 
 
