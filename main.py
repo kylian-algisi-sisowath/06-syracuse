@@ -106,6 +106,7 @@ def main():
     Affiche le temps de vol, le temps de vol en altitude et l'altitude maximale
     de la suite de Syracuse.
     """
+
     lsyr = syracuse_l(15)
     syr_plot(lsyr)
     print(temps_de_vol(lsyr))
